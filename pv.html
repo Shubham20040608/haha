@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image and Video Page</title>
+    <style>
+         body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            overflow: hidden;
+            position: relative;
+            height: 100vh;
+        }
+
+        /* Stars */
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 2s infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        /* Teddies */
+        .teddy {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Image and Video Section */
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding-top: 8px;
+        }
+        img {
+            max-width: 8%;
+            height: 10%;
+            margin-bottom: 1px;
+        }
+
+        video {
+            max-width: 10%;
+            height: auto;
+            padding-top: 6px;
+        }
+    </style>
+</head>
+<body>
+ <!-- Stars -->
+ <div id="stars"></div>
+
+ <!-- Teddies -->
+ <img class="teddy" src="c:\Users\Shubham\Downloads\WhatsApp Image 2025-02-13 at 11.07.38 PM.jpeg" alt="Teddy 1" style="top: 20%; left: 10%;💖">
+ <img class="teddy" src="c:\Users\Shubham\Downloads\WhatsApp Image 2025-02-13 at 11.07.39 PM.jpeg" alt="Teddy 2" style="top: 29%; left: 70%;💖">
+ <img class="teddy" src="c:\Users\Shubham\Downloads\WhatsApp Image 2025-02-13 at 10.59.45 PM.jpeg" alt="Teddy 3" style="top: 76%; left: 20%;💖">
+ <img class="teddy" src="c:\Users\Shubham\Downloads\WhatsApp Image 2025-02-13 at 11.07.38 PM (1).jpeg" alt="Teddy 4" style="top: 83%; left: 65%;💖">
+
+ !-- Content Section -->
+ <div class="content">
+     <h1 style="color: white;">HEHEHEHE</h1>
+
+    <!-- Image Section -->
+    <h5>Attached Picture</h5>
+    <img src="c:\Users\Shubham\Downloads\WhatsApp Image 2025-02-13 at 11.30.07 PM.jpeg" height="50" alt="Attached Picture">
+<br>
+    <h3 style="color:azure;">I know i'm so beautiful for you i can see that <br> that's why I'm asking you to be my valentine this year🤣</h3>
+
+    <!-- Video Section -->
+    <h2>Play a Video</h2>
+    <video controls>
+        <source src="c:\Users\Shubham\Downloads\WhatsApp Video 2025-02-13 at 9.59.06 PM.mp4" height="50" position="center" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <script>
+        // Generate random stars
+        const starsContainer = document.getElementById('stars');
+        const numStars = 100;
+
+        for (let i = 0; i < numStars; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.top = `${Math.random() * 100}vh`;
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.animationDelay = `${Math.random() * 2}s`;
+            starsContainer.appendChild(star);
+        }
+    </script>
+
+    
+
+</body>
+</html>
